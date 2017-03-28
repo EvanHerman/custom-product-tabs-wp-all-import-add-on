@@ -126,17 +126,17 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
 			continue;
 		}
 
-		// 0 = do not apply saved tab
-		// 1 = apply as saved tab
-		// 2 = apply as custom tab
+		// 'ignore' = do not apply saved tab
+		// 'apply_saved' = apply as saved tab
+		// 'apply_custom' = apply as custom tab
 		$action = $data['yikes_apply_saved_tab_' . $i];
 
 		// We don't process these
-		if ( $action !== '1' && $action !== '2' ) {
+		if ( $action === 'ignore' ) {
 			continue;
 		}
 
-		// If $action is 1 or 2, we're going to add the tab to the meta field
+		// If $action is apply_saved or apply_custom, we're going to add the tab to the meta field
 		$update_meta  = true;
 
 		// Set up our tab data
@@ -152,8 +152,8 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
 			'id'		=> $saved_tab_id
 		);
 
-		// If action is 1, we also add the tab as a saved tab
-		if ( $action === '1' ) {
+		// If action is apply_saved, we also add the tab as a saved tab
+		if ( $action === 'apply_saved' ) {
 			$update_tab_option = true;
 
 		 	// The array that we will update our 'yikes_woo_reusable_products_tabs_applied' with
