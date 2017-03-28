@@ -53,13 +53,7 @@ if ( ! empty( $saved_tabs ) ) {
 			'Saved Tab - ' . $saved_tab['tab_id'] . ': ' . $saved_tab['tab_title'],
 			array(
 
-				// Add a saved tab's title as a text field, pre-populate text field with tab title content
-				// $custom_product_tabs_for_woocommerce_addon->add_field( $tab_title_field_name, 'Tab Title:', 'text', null, null, false, $saved_tab['tab_title'] ),
-
-				// Add a saved tab's content as a textarea field, pre-populate textarea with tab content
-				// $custom_product_tabs_for_woocommerce_addon->add_field( $tab_content_field_name, 'Tab Content:', 'wp_editor', null, null, false, stripslashes( $saved_tab['tab_content'] ) ),
-
-				// Radio buttons - apply tab vs. ignore tab
+				// Radio buttons - ignore tab, apply saved, apply custom (show title/content fields if apply custom is chosen)
 				$custom_product_tabs_for_woocommerce_addon->add_field( $apply_tab_field_name, 'Apply this tab to imported products?', 'radio', 
 					array( 
 						'ignore' => array( 'No - Ignore Tab' ),
