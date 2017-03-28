@@ -1,1 +1,1 @@
-# Custom Product Tabs for WooCommerce WP All Import Add-on
+# Custom Product Tabs WP All Import Add-on
