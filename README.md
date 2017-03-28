@@ -1,1 +1,1 @@
-# Making a readme
+# Custom Product Tabs for WooCommerce WP All Import Add-on
