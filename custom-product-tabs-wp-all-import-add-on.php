@@ -207,9 +207,6 @@ function cpt4woo_fetch_product_tabs_for_post( $post_id ) {
 /**
 * i18n
 */
-/*
-* Setting up i18n
-*/
 function cpt4woo_load_text_domain() {
 	load_plugin_textdomain(
 		'custom-product-tabs-wp-all-import-add-on',
@@ -217,4 +214,5 @@ function cpt4woo_load_text_domain() {
 		dirname( __FILE__  ) . '/languages/'
 	);
 }
-add_action( 'plugins_loaded', 'cpt4woo_load_text_domain' );`
+
+add_action( 'plugins_loaded', 'cpt4woo_load_text_domain' );
