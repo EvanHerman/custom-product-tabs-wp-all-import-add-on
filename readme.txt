@@ -18,7 +18,7 @@ All of your saved custom product tabs will be loaded into the familiar WP All Im
 
 Please be aware that importing custom product tabs will wipe out existing tabs for the product before applying the new ones.
 
-<i>This plugin was developed by [Yikes, Inc.]() and the [WP All Import]() team.</i>
+<i>This plugin was developed by [Yikes, Inc.](https:/www.yikesinc.com) and the [WP All Import at Soflyy](http://soflyy.com/) team.</i>
 
 == Installation ==
 
