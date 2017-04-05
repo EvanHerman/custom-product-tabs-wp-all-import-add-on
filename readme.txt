@@ -5,6 +5,7 @@ Tags: woocommerce, product tabs, tabs, woo, wp all import, import, tab import, c
 Requires at least: 3.8
 Tested up to: 4.7.3
 Stable tag: 1.0.0
+Tested WooCommerce up to: 3.0.0
 License: GPLv2 or later
 
 Add custom tabs with content to products in WooCommerce. 

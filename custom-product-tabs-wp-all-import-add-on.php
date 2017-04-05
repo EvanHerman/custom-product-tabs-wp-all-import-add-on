@@ -49,18 +49,18 @@ if ( ! empty( $saved_tabs ) ) {
 			array(
 
 				// Radio buttons - ignore tab, apply saved, apply custom (show title/content fields if apply custom is chosen)
-				$custom_product_tabs_for_woocommerce_addon->add_field( $apply_tab_field_name, 'Apply this tab to imported products?', 'radio', 
+				$custom_product_tabs_for_woocommerce_addon->add_field( $apply_tab_field_name, __( 'Apply this tab to imported products?', 'custom-product-tabs-wp-all-import-add-on' ), 'radio', 
 					array( 
-						'ignore' => array( 'No - Ignore Tab' ),
-						'apply_saved' => array( 'Yes - Used Saved Tab Title & Content' ),
+						'ignore' => array( __( 'No - Ignore Tab', 'custom-product-tabs-wp-all-import-add-on' ) ),
+						'apply_saved' => array( __( 'Yes - Use Saved Tab Title & Content', 'custom-product-tabs-wp-all-import-add-on' ) ),
 						'apply_custom' => 
 							array( 
-								'Yes - Edit Tab Title & Content',
+								__( 'Yes - Edit Tab Title & Content', 'custom-product-tabs-wp-all-import-add-on' ),
 								$custom_product_tabs_for_woocommerce_addon->add_field( $tab_title_field_name, 'Tab Title:', 'text', null, null, false, $saved_tab['tab_title'] ),
 								$custom_product_tabs_for_woocommerce_addon->add_field( $tab_content_field_name, 'Tab Content:', 'wp_editor', null, null, false, stripslashes( $saved_tab['tab_content'] ) ),
 							),
 					),
-					'If you choose no, this tab will not be added to the product. <br> If you choose "Apply as Saved Tab," this tab will be added as a saved tab. Any text you add will be overwritten with the saved tab\'s value. If you choose "Apply as Custom Tab" the tab will be added, not as a saved tab, and you can customize the content.' )
+					sprintf( __( '"No - Ignore Tab" - This tab will not be added to your products. %1$s "Use Saved Tab Title & Content" - This tab will be added as a saved tab. %1$s "Yes - Edit Tab Title & Content" -  This tab will be added as a custom tab. You can customize the content.', 'custom-product-tabs-wp-all-import-add-on' ), '<br>' ) )
 			)
 		);
 
@@ -71,7 +71,7 @@ if ( ! empty( $saved_tabs ) ) {
 } else {
 
 	// If we don't have saved tabs, just let the user know
-	$custom_product_tabs_for_woocommerce_addon->add_text( '<p>You need to set up saved tabs in order to apply them to your products.</p>' );
+	$custom_product_tabs_for_woocommerce_addon->add_text( '<p>' . __( 'You need to set up saved tabs in order to apply them to your products.', 'custom-product-tabs-wp-all-import-add-on' ) . '</p>' );
 }
 
 // Define the import function
@@ -104,9 +104,9 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
     // Fetch the current tabs - we'll append to them if we need to
     $current_tabs = array();
 
-    if ( ! empty($saved_tabs) ){
+    if ( ! empty( $saved_tabs ) ) {
 
-        foreach ($saved_tabs as $tab){
+        foreach ( $saved_tabs as $tab ) {
 
             // Verify that we have all four pieces of info for this tab
             if (  ! isset( $data['yikes_saved_tab_title_' . $tab['tab_id'] ] ) || ! isset( $data['yikes_saved_tab_content_' . $tab['tab_id'] ] ) || ! isset( $data['yikes_apply_saved_tab_' . $tab['tab_id'] ] ) ) {
@@ -128,7 +128,7 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
             $tab_content  = $data['yikes_saved_tab_content_' . $tab['tab_id'] ];
             $saved_tab_id = cpt4woo_create_tab_id_string( $tab_title );
 
-            if ($action == "apply_custom") {
+            if ( $action == 'apply_custom' ) {
                 // The array of arrays that we will add as our 'yikes_woo_products_tabs' post meta
                 $current_tabs[] = array(
                     'title'		=> $tab_title,
@@ -167,6 +167,13 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
 
 }
 
+/**
+* Take a tab's title and return a sluggified version
+*
+* @param  string | $tab_title | A title of a tab, e.g. My Awesome Tab
+*
+* @return string | A 'sluggified' version of the tab title, e.g. my-awesome-tab
+*/
 function cpt4woo_create_tab_id_string( $tab_title ) {
 
 	// Convert to lowercase
@@ -184,8 +191,30 @@ function cpt4woo_create_tab_id_string( $tab_title ) {
 	return $saved_tab_id;
 }
 
+/**
+* Fetch the post meta field `yikes_woo_products_tabs` for this product
+*
+* @param  int   | $post_id
+*
+* @return The array of custom product tabs || empty array
+*/
 function cpt4woo_fetch_product_tabs_for_post( $post_id ) {
 	$current_products_tabs = get_post_meta( $post_id, 'yikes_woo_products_tabs', true );
 	$current_products_tabs = empty( $current_products_tabs ) ? array() : $current_products_tabs;
 	return $current_products_tabs;
 }
+
+/**
+* i18n
+*/
+/*
+* Setting up i18n
+*/
+function cpt4woo_load_text_domain() {
+	load_plugin_textdomain(
+		'custom-product-tabs-wp-all-import-add-on',
+		false,
+		dirname( __FILE__  ) . '/languages/'
+	);
+}
+add_action( 'plugins_loaded', 'cpt4woo_load_text_domain' );`

@@ -1,0 +1,15 @@
+{
+  "name": "custom-product-tabs-wp-all-import-add-on",
+  "version": "1.0.0",
+  "description": "Import your custom product tabs with WP All Import.",
+  "author": "Yikes Inc.",
+  "license": "GPLv2",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-cli": "^1.0.0",
+    "grunt-pot": "^0.3.0"
+  }
+}
+
