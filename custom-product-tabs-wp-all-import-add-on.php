@@ -45,7 +45,7 @@ if ( ! empty( $saved_tabs ) ) {
 		// Nest all of our fields within a nice accordion
 		$custom_product_tabs_for_woocommerce_addon->add_options(
 			null,
-			'Saved Tab - ' . $saved_tab['tab_id'] . ': ' . $saved_tab['tab_title'],
+			$saved_tab['tab_title'],
 			array(
 
 				// Radio buttons - ignore tab, apply saved, apply custom (show title/content fields if apply custom is chosen)
