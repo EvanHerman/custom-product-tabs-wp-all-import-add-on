@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 Tested WooCommerce up to: 3.0.0
 License: GPLv2 or later
 
-Add custom tabs with content to products in WooCommerce. 
+This add-on extends Custom Product Tabs for WooCommerce to work with WP All Import. 
 
 == Description ==
 
@@ -18,11 +18,16 @@ All of your saved custom product tabs will be loaded into the familiar WP All Im
 
 Please be aware that importing custom product tabs will wipe out existing tabs for the product before applying the new ones.
 
-<i>This plugin was developed by [Yikes, Inc.](https:/www.yikesinc.com) and the [WP All Import at Soflyy](http://soflyy.com/) team.</i>
+<i>This plugin was developed by [YIKES, Inc.](https:/www.yikesinc.com) and the [WP All Import at Soflyy](http://soflyy.com/) team.</i>
+
+> Note: This add-on plugin requires [Custom Product Tabs for WooCommerce](https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/) and [WP All Import](https://wordpress.org/plugins/wp-all-import/) to work.
 
 == Installation ==
-
-
+1. Download the plugin .zip file and make note of where on your computer you downloaded it to.
+2. In the WordPress admin (yourdomain.com/wp-admin) go to Plugins > Add New or click the "Add New" button on the main plugins screen.
+3. On the following screen, click the "Upload Plugin" button.
+4. Browse your computer to where you downloaded the plugin .zip file, select it and click the "Install Now" button.
+5. After the plugin has successfully installed, click "Activate Plugin" and enjoy!
 
 == Screenshots ==
 
