@@ -3,7 +3,7 @@ Contributors: yikesinc, liljimmi, yikesitskevin, soflyy, wpallimport
 Donate link: http://yikesinc.com
 Tags: woocommerce, product tabs, tabs, woo, wp all import, import, tab import, custom product tabs, yikes
 Requires at least: 3.8
-Tested up to: 4.7.3
+Tested up to: 4.7.4
 Stable tag: 1.0.0
 Tested WooCommerce up to: 3.0.0
 License: GPLv2 or later
@@ -31,6 +31,10 @@ Please be aware that importing custom product tabs will wipe out existing tabs f
 
 == Screenshots ==
 
+1. The Custom Product Tabs for WooCommerce section of the WP All Import interface
+2. An example of your options when applying saved tabs to your imported products - you can ignore, use the default, or customize a tab.
+3. An example of customizing your tab
+
 == Frequently Asked Questions ==
 
 = What plugins do I need to use this plugin? =
@@ -47,5 +51,5 @@ Saved and custom tabs come from the [Custom Product Tabs for WooCommerce](https:
 
 == Changelog ==
 
-= 1.0.0 - April 20th, 2017 = 
+= 1.0.0 - April 24th, 2017 = 
 * Hello World.
