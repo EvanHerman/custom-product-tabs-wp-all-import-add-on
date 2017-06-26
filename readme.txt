@@ -3,8 +3,8 @@ Contributors: yikesinc, liljimmi, yikesitskevin, soflyy, wpallimport
 Donate link: http://yikesinc.com
 Tags: woocommerce, product tabs, tabs, woo, wp all import, import, tab import, custom product tabs, yikes
 Requires at least: 3.8
-Tested up to: 4.7.4
-Stable tag: 1.0.0
+Tested up to: 4.8
+Stable tag: 1.0.1
 Tested WooCommerce up to: 3.0.0
 License: GPLv2 or later
 
@@ -50,6 +50,9 @@ No. The options for applying/ignoring custom product tabs will be applied to all
 Saved and custom tabs come from the [Custom Product Tabs for WooCommerce](https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/). A custom tab is defined for a single product, while a saved tab can be applied to as many products as you'd like.
 
 == Changelog ==
+
+= 1.0.1 - June 26th, 2017 = 
+* Fixed an issue where the ID of a saved tab was being saved incorrectly - saved tabs should now be properly recognized as saved tabs.
 
 = 1.0.0 - April 24th, 2017 = 
 * Hello World.
