@@ -5,7 +5,7 @@
  * Description: Extend WP All Import's functionality to import your Custom Product Tabs for WooCommerce data
  * Author: YIKES, Inc., Kevin Utz
  * Author URI: http://www.yikesinc.com
- * Version: 1.0.1
+ * Version: 2.0.0
  * Text Domain: custom-product-tabs-wp-all-import-add-on
  * Domain Path: languages/
  *
@@ -126,7 +126,7 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
             // Set up our tab data
             $tab_title	  = $data['yikes_saved_tab_title_' . $tab['tab_id'] ];
             $tab_content  = $data['yikes_saved_tab_content_' . $tab['tab_id'] ];
-            $saved_tab_id = cpt4woo_create_tab_id_string( $tab_title );
+            $saved_tab_id = sanitize_title( $tab_title );
 
             if ( $action == 'apply_custom' ) {
                 // The array of arrays that we will add as our 'yikes_woo_products_tabs' post meta
@@ -165,30 +165,6 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
 		update_option( 'yikes_woo_reusable_products_tabs_applied', $saved_tabs_applied );
 	}
 
-}
-
-/**
-* Take a tab's title and return a sluggified version
-*
-* @param  string | $tab_title | A title of a tab, e.g. My Awesome Tab
-*
-* @return string | A 'sluggified' version of the tab title, e.g. my-awesome-tab
-*/
-function cpt4woo_create_tab_id_string( $tab_title ) {
-
-	// Convert to lowercase
-	$saved_tab_id = strtolower( $tab_title );
-
-	// Remove: non-alphas, numbers, underscores, whitespace
-	$saved_tab_id = preg_replace( "/[^\w\s]/", '', $saved_tab_id );
-
-	// Replace: underscores with dashes
-	$saved_tab_id = preg_replace( "/_+/", ' ', $saved_tab_id );
-
-	// Replace: all multiple spaces with single dashes
-	$saved_tab_id = preg_replace( "/\s+/", '-', $saved_tab_id );
-
-	return $saved_tab_id;
 }
 
 /**
