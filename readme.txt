@@ -51,8 +51,8 @@ Saved and custom tabs come from the [Custom Product Tabs for WooCommerce](https:
 
 == Changelog ==
 
-= 2.0.0 - October 3rd, 2017 = 
-* Compatibility with Custom Product Tabs 1.6.0 - update to the way we do tab slugs
+= 2.0.0 - October 13th, 2017 = 
+* Compatibility with Custom Product Tabs 1.6.1+ - update to the way we do tab slugs
 
 = 1.0.1 - June 26th, 2017 = 
 * Fixed an issue where the ID of a saved tab was being saved incorrectly - saved tabs should now be properly recognized as saved tabs.

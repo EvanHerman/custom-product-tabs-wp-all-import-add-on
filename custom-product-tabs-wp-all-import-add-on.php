@@ -3,7 +3,7 @@
  * Plugin Name: Custom Product Tabs WP All Import Add-on 
  * Plugin URI: http://www.yikesplugins.com
  * Description: Extend WP All Import's functionality to import your Custom Product Tabs for WooCommerce data
- * Author: YIKES, Inc., Kevin Utz
+ * Author: YIKES, Inc.
  * Author URI: http://www.yikesinc.com
  * Version: 2.0.0
  * Text Domain: custom-product-tabs-wp-all-import-add-on
@@ -126,7 +126,7 @@ function cpt4woo_addon_import( $post_id, $data, $import_options ) {
             // Set up our tab data
             $tab_title	  = $data['yikes_saved_tab_title_' . $tab['tab_id'] ];
             $tab_content  = $data['yikes_saved_tab_content_' . $tab['tab_id'] ];
-            $saved_tab_id = sanitize_title( $tab_title );
+            $saved_tab_id = urldecode( sanitize_title( $tab_title ) );
 
             if ( $action == 'apply_custom' ) {
                 // The array of arrays that we will add as our 'yikes_woo_products_tabs' post meta
