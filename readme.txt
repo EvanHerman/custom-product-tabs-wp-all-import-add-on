@@ -50,6 +50,9 @@ Saved and custom tabs come from the [Custom Product Tabs for WooCommerce](https:
 
 == Changelog ==
 
+= 2.0.1 - November 1st, 2017 =
+* Declaring compatibility with WooCommerce and WordPress
+
 = 2.0.0 - October 13th, 2017 = 
 * Compatibility with Custom Product Tabs 1.6.1+ - update to the way we do tab slugs
 
