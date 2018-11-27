@@ -3,8 +3,8 @@ Contributors: yikesinc, liljimmi, yikesitskevin, soflyy, wpallimport
 Donate link: http://yikesinc.com
 Tags: woocommerce, product tabs, tabs, woo, wp all import, import, tab import, custom product tabs, yikes
 Requires at least: 3.8
-Tested up to: 4.8.3
-Stable tag: 2.0.1
+Tested up to: 5.0.0
+Stable tag: 2.0.2
 License: GPLv2 or later
 
 This add-on extends Custom Product Tabs for WooCommerce to work with WP All Import. 
@@ -49,6 +49,10 @@ No. The options for applying/ignoring custom product tabs will be applied to all
 Saved and custom tabs come from the [Custom Product Tabs for WooCommerce](https://wordpress.org/plugins/yikes-inc-easy-custom-woocommerce-product-tabs/). A custom tab is defined for a single product, while a saved tab can be applied to as many products as you'd like.
 
 == Changelog ==
+
+= 2.0.2 - November 27th, 2018 =
+* Updating the rapid-addon WP All Import API file.
+* Minor updates related to WPCS.s
 
 = 2.0.1 - November 1st, 2017 =
 * Declaring compatibility with WooCommerce and WordPress
