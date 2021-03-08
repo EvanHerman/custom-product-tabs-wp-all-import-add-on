@@ -1,0 +1,16 @@
+# Directories
+/.wordpress-org
+/.git
+/.github
+/node_modules
+
+# Files
+.distignore
+.gitignore
+.scrutinizer.yml
+Gruntfile.js
+README.md
+composer.json
+composer.lock
+package.json
+package-lock.json
