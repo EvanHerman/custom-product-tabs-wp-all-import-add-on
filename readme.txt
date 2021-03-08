@@ -3,7 +3,7 @@ Contributors: yikesinc, liljimmi, yikesitskevin, soflyy, wpallimport
 Donate link: http://yikesinc.com
 Tags: woocommerce, product tabs, tabs, woo, wp all import, import, tab import, custom product tabs, yikes
 Requires at least: 3.8
-Tested up to: 5.1.1
+Tested up to: 5.6.2
 Stable tag: 2.0.4
 License: GPLv2 or later
 
