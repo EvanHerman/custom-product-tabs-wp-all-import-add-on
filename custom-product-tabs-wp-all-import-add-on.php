@@ -5,12 +5,12 @@
  * Description: Extend WP All Import's functionality to import your Custom Product Tabs for WooCommerce data
  * Author: YIKES, Inc.
  * Author URI: http://www.yikesinc.com
- * Version: 2.0.4
+ * Version: 2.0.5
  * Text Domain: custom-product-tabs-wp-all-import-add-on
  * Domain Path: languages/
  *
  * WC requires at least: 3.0.0
- * WC tested up to: 3.6
+ * WC tested up to: 7.8
  *
  * Copyright: (c) 2017 YIKES Inc.
  *
